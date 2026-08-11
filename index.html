@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Renan Giusti — Sistemas, Projetos & Negócio</title>
-<meta name="description" content="Portfólio de Renan Giusti: desenvolvedor de sistemas e sites, gerente de projetos e business partner.">
+<meta name="description" content="Portfólio de Renan Giusti: gerente de projetos, business partner e desenvolvedor de sistemas e sites.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -302,6 +302,7 @@
   @keyframes grow{from{transform:scaleY(0)}}
   .bars.teal i{background:linear-gradient(180deg,var(--teal),#1d6e63)}
   .bars.blue i{background:linear-gradient(180deg,var(--blue),#2f6299)}
+  .bars.gold i{background:linear-gradient(180deg,var(--gold),#a3741f)}
   .axis{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:7.5px;color:var(--screen-dim);margin-top:6px}
 
   /* linhas de tabela */
@@ -331,6 +332,24 @@
   .stop .lbl{font-family:var(--font-mono);font-size:7.5px;color:var(--screen-dim);line-height:1.3}
   .leg-line{flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--teal) 0 6px,transparent 6px 12px)}
   .leg-line.pend{background:repeating-linear-gradient(90deg,var(--screen-line) 0 6px,transparent 6px 12px)}
+
+  /* kanban (CRM) */
+  .kanban{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .kcol{background:var(--screen);border:1px solid var(--screen-line);border-radius:8px;padding:8px;min-width:0}
+  .kcol-title{
+    font-family:var(--font-mono);font-size:8px;color:var(--screen-dim);
+    letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;
+    display:flex;justify-content:space-between;align-items:center;gap:4px;
+  }
+  .kcol-title b{color:var(--screen-text);font-weight:500}
+  .kcard{
+    background:var(--screen-2);border:1px solid var(--screen-line);border-left:3px solid var(--blue);
+    border-radius:6px;padding:7px 8px;margin-bottom:6px;font-size:8.5px;color:var(--screen-text);
+  }
+  .kcard.a{border-left-color:var(--accent)}
+  .kcard.t{border-left-color:var(--teal)}
+  .kcard.g{border-left-color:var(--gold)}
+  .kcard .kc-val{font-family:var(--font-mono);font-size:8px;color:var(--screen-dim);margin-top:4px;display:flex;justify-content:space-between}
 
   /* gantt (PM) */
   .gantt-row{display:grid;grid-template-columns:92px 1fr;gap:8px;align-items:center;margin-bottom:8px}
@@ -440,24 +459,25 @@
 
   <!-- HERO -->
   <div class="wrap hero">
-    <p class="hero-kicker rise d1">Portfólio — Sistemas · Projetos · Negócio</p>
-    <h1 class="rise d2">Construo <em>sistemas</em> e conduzo <em>projetos</em> que viram resultado de negócio.</h1>
+    <p class="hero-kicker rise d1">Portfólio — Projetos · Sistemas · Negócio</p>
+    <h1 class="rise d2">Conduzo <em>projetos</em> e construo <em>sistemas</em> que viram resultado de negócio.</h1>
     <p class="hero-sub rise d3">
-      Sou o Renan. Atuo na interseção entre tecnologia e negócio: desenvolvo sistemas e sites de ponta a ponta,
-      gerencio projetos com método e opero como business partner — traduzindo estratégia em produto entregue.
+      Sou o Renan. Atuo na interseção entre negócio e tecnologia: gerencio projetos com método,
+      opero como business partner junto à liderança e desenvolvo sistemas e sites de ponta a ponta —
+      traduzindo estratégia em produto entregue.
     </p>
     <div class="hero-roles rise d4">
-      <span class="role-chip">Desenvolvedor de Sistemas &amp; Sites</span>
       <span class="role-chip">Gerente de Projetos</span>
       <span class="role-chip">Business Partner</span>
+      <span class="role-chip">Desenvolvedor de Sistemas &amp; Sites</span>
     </div>
     <span class="hero-note">São Paulo · Brasil</span>
   </div>
 
   <div class="marquee" aria-hidden="true">
     <div class="marquee-inner">
-      <span>Sistemas de gestão <b>●</b></span><span>Dashboards &amp; BI <b>●</b></span><span>Sites institucionais <b>●</b></span><span>Gestão de projetos <b>●</b></span><span>Business Partner <b>●</b></span><span>Automação de processos <b>●</b></span>
-      <span>Sistemas de gestão <b>●</b></span><span>Dashboards &amp; BI <b>●</b></span><span>Sites institucionais <b>●</b></span><span>Gestão de projetos <b>●</b></span><span>Business Partner <b>●</b></span><span>Automação de processos <b>●</b></span>
+      <span>Gestão de projetos <b>●</b></span><span>Business Partner <b>●</b></span><span>Logística de GNL <b>●</b></span><span>CRM &amp; funil comercial <b>●</b></span><span>Sistemas de gestão <b>●</b></span><span>Dashboards &amp; indicadores <b>●</b></span>
+      <span>Gestão de projetos <b>●</b></span><span>Business Partner <b>●</b></span><span>Logística de GNL <b>●</b></span><span>CRM &amp; funil comercial <b>●</b></span><span>Sistemas de gestão <b>●</b></span><span>Dashboards &amp; indicadores <b>●</b></span>
     </div>
   </div>
 
@@ -469,17 +489,6 @@
         <h2 class="sec-title">Três frentes, <em>um mesmo objetivo</em></h2>
       </div>
       <div class="roles-grid reveal">
-        <div class="role-card">
-          <span class="idx">DEV</span>
-          <h3>Desenvolvimento de Sistemas &amp; Sites</h3>
-          <p>Do levantamento de requisitos ao deploy: sistemas de gestão, dashboards, integrações e sites que resolvem o problema real da operação.</p>
-          <ul>
-            <li>Sistemas web sob medida</li>
-            <li>Dashboards e indicadores</li>
-            <li>Integrações e automações</li>
-            <li>Sites institucionais</li>
-          </ul>
-        </div>
         <div class="role-card">
           <span class="idx">PM</span>
           <h3>Gestão de Projetos</h3>
@@ -502,6 +511,17 @@
             <li>Evolução contínua</li>
           </ul>
         </div>
+        <div class="role-card">
+          <span class="idx">DEV</span>
+          <h3>Desenvolvimento de Sistemas &amp; Sites</h3>
+          <p>Do levantamento de requisitos ao deploy: sistemas de gestão, CRMs, dashboards, integrações e sites que resolvem o problema real da operação.</p>
+          <ul>
+            <li>Sistemas web sob medida</li>
+            <li>CRMs e funil comercial</li>
+            <li>Dashboards e indicadores</li>
+            <li>Integrações e automações</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -519,201 +539,25 @@
         <p>Os prints abaixo representam sistemas reais em produção. Por confidencialidade, <strong>números, valores e logos foram ocultados</strong> — a estrutura e a experiência das telas são fiéis ao entregue.</p>
       </div>
 
-      <!-- FinUp -->
-      <article class="project reveal">
-        <div class="p-info">
-          <span class="p-num">P.01</span>
-          <h3>FinUp</h3>
-          <p class="p-type">Plataforma de gestão financeira</p>
-          <p>
-            Plataforma completa de gestão financeira com conexão a contas via Open Finance, categorização automática
-            de transações, visão consolidada de contas, cartões e investimentos, e painéis de acompanhamento
-            de metas e orçamento.
-          </p>
-          <div class="p-tags">
-            <span class="p-tag">Open Finance</span>
-            <span class="p-tag">Dashboards</span>
-            <span class="p-tag">Automação</span>
-            <span class="p-tag">Integrações via API</span>
-          </div>
-          <p class="p-role"><b>Papel:</b> concepção, desenvolvimento full-stack e produto</p>
-        </div>
-        <div class="shot">
-          <div class="browser">
-            <div class="b-bar">
-              <div class="dots"><i></i><i></i><i></i></div>
-              <div class="b-url">app.<span class="redact" style="width:52px"></span>.com.br/dashboard</div>
-            </div>
-            <div class="b-body">
-              <div class="app">
-                <aside>
-                  <div class="side-item" style="margin-bottom:10px"><span class="logo-hidden"><span class="glyph"></span><span class="name">FinUp</span></span></div>
-                  <div class="side-item on">◉ Visão geral</div>
-                  <div class="side-item">◻ Contas</div>
-                  <div class="side-item">◻ Cartões</div>
-                  <div class="side-item">◻ Investimentos</div>
-                  <div class="side-item">◻ Metas</div>
-                  <div class="side-item">◻ Relatórios</div>
-                </aside>
-                <main>
-                  <div class="app-head">
-                    <div>
-                      <div class="app-title">Visão geral</div>
-                      <div class="app-sub">Atualizado via Open Finance · há 2 min</div>
-                    </div>
-                    <span class="pill ok">● Sincronizado</span>
-                  </div>
-                  <div class="cards">
-                    <div class="kpi">
-                      <div class="k-label">Saldo total</div>
-                      <div class="k-value">R$ <span class="num">48.372,91</span></div>
-                      <div class="k-delta up">▲ <span class="num">4,2</span>% no mês</div>
-                    </div>
-                    <div class="kpi">
-                      <div class="k-label">Gastos do mês</div>
-                      <div class="k-value">R$ <span class="num">7.815,40</span></div>
-                      <div class="k-delta down">▼ <span class="num">2,8</span>% vs. anterior</div>
-                    </div>
-                    <div class="kpi">
-                      <div class="k-label">Investido</div>
-                      <div class="k-value">R$ <span class="num">126.940,00</span></div>
-                      <div class="k-delta up">▲ <span class="num">1,1</span>% na semana</div>
-                    </div>
-                  </div>
-                  <div class="two-col">
-                    <div class="panel">
-                      <div class="panel-title">Fluxo mensal <span class="pill info">12 meses</span></div>
-                      <div class="bars">
-                        <i style="height:44%"></i><i style="height:62%"></i><i style="height:38%"></i><i style="height:71%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:47%"></i><i style="height:66%"></i><i style="height:58%"></i><i style="height:88%"></i><i style="height:52%"></i><i style="height:74%"></i>
-                      </div>
-                      <div class="axis"><span>jan</span><span>mar</span><span>mai</span><span>jul</span><span>set</span><span>nov</span></div>
-                    </div>
-                    <div class="panel">
-                      <div class="panel-title">Por categoria</div>
-                      <div class="donut-wrap">
-                        <div class="donut"></div>
-                        <div class="legend">
-                          <span><i style="background:var(--accent)"></i>Moradia · <span class="num">38%</span></span>
-                          <span><i style="background:var(--teal)"></i>Alimentação · <span class="num">26%</span></span>
-                          <span><i style="background:var(--gold)"></i>Transporte · <span class="num">18%</span></span>
-                          <span><i style="background:var(--blue)"></i>Outros · <span class="num">18%</span></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="panel">
-                    <div class="panel-title">Últimas transações</div>
-                    <div class="trow"><span>Supermercado <span class="redact" style="width:40px"></span></span><span class="mut">Alimentação</span><span class="mut">hoje</span><span class="val">R$ <span class="num">312,45</span></span></div>
-                    <div class="trow"><span>PIX recebido — <span class="redact" style="width:52px"></span></span><span class="mut">Transferência</span><span class="mut">ontem</span><span class="val">R$ <span class="num">1.500,00</span></span></div>
-                    <div class="trow"><span>Fatura cartão <span class="redact" style="width:34px"></span></span><span class="mut">Cartão</span><span class="mut">08/ago</span><span class="val">R$ <span class="num">2.284,17</span></span></div>
-                  </div>
-                </main>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Comgás -->
-      <article class="project reveal">
-        <div class="p-info">
-          <span class="p-num">P.02</span>
-          <h3>Gestão de Operações — Energia</h3>
-          <p class="p-type">Sistema corporativo · versões 4.0 → 5.0</p>
-          <p>
-            Evolução de um sistema corporativo de gestão de operações para uma grande empresa do setor de energia:
-            controle de ordens e medições, indicadores operacionais em tempo real e módulos de acompanhamento
-            que substituíram planilhas por um fluxo único e auditável.
-          </p>
-          <div class="p-tags">
-            <span class="p-tag">Sistema web corporativo</span>
-            <span class="p-tag">Indicadores operacionais</span>
-            <span class="p-tag">Workflow &amp; auditoria</span>
-            <span class="p-tag">Migração 4.0 → 5.0</span>
-          </div>
-          <p class="p-role"><b>Papel:</b> desenvolvimento, gestão do projeto e interface com o negócio</p>
-        </div>
-        <div class="shot">
-          <div class="browser">
-            <div class="b-bar">
-              <div class="dots"><i></i><i></i><i></i></div>
-              <div class="b-url">portal.<span class="redact" style="width:64px"></span>.com.br/operacoes</div>
-            </div>
-            <div class="b-body">
-              <div class="app">
-                <aside>
-                  <div class="side-item" style="margin-bottom:10px"><span class="logo-hidden"><span class="glyph"></span><span class="name">Portal</span></span></div>
-                  <div class="side-item">◻ Painel</div>
-                  <div class="side-item on">◉ Ordens</div>
-                  <div class="side-item">◻ Medições</div>
-                  <div class="side-item">◻ Equipes</div>
-                  <div class="side-item">◻ Relatórios</div>
-                  <div class="side-item">◻ Auditoria</div>
-                </aside>
-                <main>
-                  <div class="app-head">
-                    <div>
-                      <div class="app-title">Ordens de serviço</div>
-                      <div class="app-sub">Ciclo atual · região <span class="redact" style="width:38px"></span></div>
-                    </div>
-                    <span class="pill warn">● <span class="num">14</span> pendências</span>
-                  </div>
-                  <div class="cards">
-                    <div class="kpi">
-                      <div class="k-label">Ordens abertas</div>
-                      <div class="k-value"><span class="num">1.248</span></div>
-                      <div class="k-delta up">▲ SLA em dia</div>
-                    </div>
-                    <div class="kpi">
-                      <div class="k-label">Concluídas no mês</div>
-                      <div class="k-value"><span class="num">3.976</span></div>
-                      <div class="k-delta up">▲ <span class="num">6,3</span>%</div>
-                    </div>
-                    <div class="kpi">
-                      <div class="k-label">Tempo médio</div>
-                      <div class="k-value"><span class="num">2,4</span> dias</div>
-                      <div class="k-delta up">▼ melhor que a meta</div>
-                    </div>
-                  </div>
-                  <div class="panel">
-                    <div class="panel-title">Fila de execução <span class="pill info">tempo real</span></div>
-                    <div class="trow"><span>OS <span class="num">48210</span> — Manutenção preventiva</span><span class="mut">Equipe <span class="redact" style="width:26px"></span></span><span class="mut">hoje</span><span class="val"><span class="pill ok">Em campo</span></span></div>
-                    <div class="trow"><span>OS <span class="num">48195</span> — Inspeção de rede</span><span class="mut">Equipe <span class="redact" style="width:26px"></span></span><span class="mut">hoje</span><span class="val"><span class="pill warn">Aguardando</span></span></div>
-                    <div class="trow"><span>OS <span class="num">48172</span> — Troca de medidor</span><span class="mut">Equipe <span class="redact" style="width:26px"></span></span><span class="mut">ontem</span><span class="val"><span class="pill ok">Concluída</span></span></div>
-                    <div class="trow"><span>OS <span class="num">48160</span> — Vistoria técnica</span><span class="mut">Equipe <span class="redact" style="width:26px"></span></span><span class="mut">ontem</span><span class="val"><span class="pill ok">Concluída</span></span></div>
-                  </div>
-                  <div class="panel">
-                    <div class="panel-title">Volume executado · semana</div>
-                    <div class="bars blue">
-                      <i style="height:52%"></i><i style="height:68%"></i><i style="height:44%"></i><i style="height:82%"></i><i style="height:60%"></i><i style="height:36%"></i><i style="height:74%"></i>
-                    </div>
-                    <div class="axis"><span>seg</span><span>ter</span><span>qua</span><span>qui</span><span>sex</span><span>sáb</span><span>dom</span></div>
-                  </div>
-                </main>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
       <!-- VirtuGNL -->
       <article class="project reveal">
         <div class="p-info">
-          <span class="p-num">P.03</span>
+          <span class="p-num">P.01</span>
           <h3>VirtuGNL</h3>
-          <p class="p-type">Plataforma de logística de GNL</p>
+          <p class="p-type">Plataforma de logística e operação de GNL</p>
           <p>
             Plataforma para operação e logística de gás natural liquefeito: programação de carregamentos,
-            acompanhamento de rotas e entregas, controle de volumes e visão executiva da operação —
-            tudo em um só lugar, do pedido à descarga.
+            acompanhamento de rotas e entregas, controle de volumes e visão executiva da operação — do pedido
+            à descarga. Conduzi o projeto junto à operação, priorizando as entregas pelo impacto no dia a dia
+            das equipes e da diretoria.
           </p>
           <div class="p-tags">
-            <span class="p-tag">Logística</span>
+            <span class="p-tag">Logística de GNL</span>
             <span class="p-tag">Programação de cargas</span>
             <span class="p-tag">Rastreamento</span>
             <span class="p-tag">Visão executiva</span>
           </div>
-          <p class="p-role"><b>Papel:</b> desenvolvimento do sistema e gestão do projeto junto à operação</p>
+          <p class="p-role"><b>Papel:</b> gestão do projeto, business partner da operação e desenvolvimento do sistema</p>
         </div>
         <div class="shot">
           <div class="browser">
@@ -774,16 +618,187 @@
         </div>
       </article>
 
-      <!-- Gestão de projetos -->
+      <!-- CRM BRV -->
+      <article class="project reveal">
+        <div class="p-info">
+          <span class="p-num">P.02</span>
+          <h3>CRM BRV</h3>
+          <p class="p-type">CRM comercial sob medida</p>
+          <p>
+            CRM desenvolvido sob medida para o processo comercial da BRV: funil de vendas em kanban,
+            gestão de propostas e follow-ups, histórico por cliente e indicadores de conversão por etapa.
+            O sistema substituiu o controle em planilhas e deu ao time comercial — e à gestão —
+            uma visão única do pipeline.
+          </p>
+          <div class="p-tags">
+            <span class="p-tag">Funil de vendas</span>
+            <span class="p-tag">Propostas &amp; follow-up</span>
+            <span class="p-tag">Indicadores de conversão</span>
+            <span class="p-tag">Visão de pipeline</span>
+          </div>
+          <p class="p-role"><b>Papel:</b> desenvolvimento do CRM, gestão do projeto e parceria com o time comercial</p>
+        </div>
+        <div class="shot">
+          <div class="browser">
+            <div class="b-bar">
+              <div class="dots"><i></i><i></i><i></i></div>
+              <div class="b-url">crm.<span class="redact" style="width:40px"></span>.com.br/pipeline</div>
+            </div>
+            <div class="b-body">
+              <div class="app" style="grid-template-columns:1fr">
+                <main>
+                  <div class="app-head">
+                    <div>
+                      <div class="app-title">Pipeline comercial</div>
+                      <div class="app-sub"><span class="num">42</span> oportunidades ativas · atualizado agora</div>
+                    </div>
+                    <span class="pill ok">● Meta do mês em dia</span>
+                  </div>
+                  <div class="cards">
+                    <div class="kpi">
+                      <div class="k-label">Em negociação</div>
+                      <div class="k-value">R$ <span class="num">386.400</span></div>
+                      <div class="k-delta up">▲ <span class="num">12</span>% no mês</div>
+                    </div>
+                    <div class="kpi">
+                      <div class="k-label">Taxa de conversão</div>
+                      <div class="k-value"><span class="num">31</span>%</div>
+                      <div class="k-delta up">▲ funil completo</div>
+                    </div>
+                    <div class="kpi">
+                      <div class="k-label">Fechado no mês</div>
+                      <div class="k-value">R$ <span class="num">148.200</span></div>
+                      <div class="k-delta up">▲ <span class="num">9</span> contratos</div>
+                    </div>
+                  </div>
+                  <div class="panel">
+                    <div class="panel-title">Funil de vendas <span class="pill info">kanban</span></div>
+                    <div class="kanban">
+                      <div class="kcol">
+                        <div class="kcol-title">Prospecção <b><span class="num">14</span></b></div>
+                        <div class="kcard">Cliente <span class="redact" style="width:34px"></span><div class="kc-val"><span>R$ <span class="num">24.000</span></span><span>2d</span></div></div>
+                        <div class="kcard">Cliente <span class="redact" style="width:28px"></span><div class="kc-val"><span>R$ <span class="num">18.500</span></span><span>4d</span></div></div>
+                        <div class="kcard">Cliente <span class="redact" style="width:40px"></span><div class="kc-val"><span>R$ <span class="num">31.200</span></span><span>1d</span></div></div>
+                      </div>
+                      <div class="kcol">
+                        <div class="kcol-title">Proposta <b><span class="num">11</span></b></div>
+                        <div class="kcard g">Cliente <span class="redact" style="width:36px"></span><div class="kc-val"><span>R$ <span class="num">52.800</span></span><span>3d</span></div></div>
+                        <div class="kcard g">Cliente <span class="redact" style="width:30px"></span><div class="kc-val"><span>R$ <span class="num">27.400</span></span><span>6d</span></div></div>
+                      </div>
+                      <div class="kcol">
+                        <div class="kcol-title">Negociação <b><span class="num">9</span></b></div>
+                        <div class="kcard a">Cliente <span class="redact" style="width:32px"></span><div class="kc-val"><span>R$ <span class="num">86.000</span></span><span>5d</span></div></div>
+                        <div class="kcard a">Cliente <span class="redact" style="width:42px"></span><div class="kc-val"><span>R$ <span class="num">44.900</span></span><span>2d</span></div></div>
+                      </div>
+                      <div class="kcol">
+                        <div class="kcol-title">Fechado <b><span class="num">8</span></b></div>
+                        <div class="kcard t">Cliente <span class="redact" style="width:38px"></span><div class="kc-val"><span>R$ <span class="num">61.300</span></span><span>✓</span></div></div>
+                        <div class="kcard t">Cliente <span class="redact" style="width:26px"></span><div class="kc-val"><span>R$ <span class="num">22.700</span></span><span>✓</span></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </main>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- AAJAPRIM -->
+      <article class="project reveal">
+        <div class="p-info">
+          <span class="p-num">P.03</span>
+          <h3>AAJAPRIM</h3>
+          <p class="p-type">Sistema de gestão para associação</p>
+          <p>
+            Sistema de gestão desenvolvido para a AAJAPRIM: cadastro e situação dos associados,
+            controle de mensalidades e inadimplência, comunicação com a base e relatórios para a diretoria.
+            Atuei lado a lado com a gestão da associação para desenhar um fluxo simples,
+            que a equipe adotou sem fricção.
+          </p>
+          <div class="p-tags">
+            <span class="p-tag">Gestão de associados</span>
+            <span class="p-tag">Mensalidades</span>
+            <span class="p-tag">Comunicação</span>
+            <span class="p-tag">Relatórios da diretoria</span>
+          </div>
+          <p class="p-role"><b>Papel:</b> desenvolvimento do sistema, gestão do projeto e apoio direto à diretoria</p>
+        </div>
+        <div class="shot">
+          <div class="browser">
+            <div class="b-bar">
+              <div class="dots"><i></i><i></i><i></i></div>
+              <div class="b-url">gestao.<span class="redact" style="width:52px"></span>.org.br/associados</div>
+            </div>
+            <div class="b-body">
+              <div class="app">
+                <aside>
+                  <div class="side-item" style="margin-bottom:10px"><span class="logo-hidden"><span class="glyph"></span><span class="name">AAJA</span></span></div>
+                  <div class="side-item">◻ Painel</div>
+                  <div class="side-item on">◉ Associados</div>
+                  <div class="side-item">◻ Mensalidades</div>
+                  <div class="side-item">◻ Comunicação</div>
+                  <div class="side-item">◻ Eventos</div>
+                  <div class="side-item">◻ Relatórios</div>
+                </aside>
+                <main>
+                  <div class="app-head">
+                    <div>
+                      <div class="app-title">Associados</div>
+                      <div class="app-sub">Base ativa · ciclo de <span class="redact" style="width:34px"></span></div>
+                    </div>
+                    <span class="pill ok">● Cobrança do mês enviada</span>
+                  </div>
+                  <div class="cards">
+                    <div class="kpi">
+                      <div class="k-label">Associados ativos</div>
+                      <div class="k-value"><span class="num">312</span></div>
+                      <div class="k-delta up">▲ <span class="num">8</span> novos no mês</div>
+                    </div>
+                    <div class="kpi">
+                      <div class="k-label">Mensalidades em dia</div>
+                      <div class="k-value"><span class="num">91</span>%</div>
+                      <div class="k-delta up">▲ <span class="num">5</span> p.p. após o sistema</div>
+                    </div>
+                    <div class="kpi">
+                      <div class="k-label">Arrecadação do mês</div>
+                      <div class="k-value">R$ <span class="num">18.640</span></div>
+                      <div class="k-delta up">▲ dentro do previsto</div>
+                    </div>
+                  </div>
+                  <div class="two-col">
+                    <div class="panel">
+                      <div class="panel-title">Situação da base</div>
+                      <div class="trow"><span>Associado <span class="redact" style="width:52px"></span></span><span class="mut">Matr. <span class="num">0482</span></span><span class="mut">desde <span class="num">2019</span></span><span class="val"><span class="pill ok">Em dia</span></span></div>
+                      <div class="trow"><span>Associado <span class="redact" style="width:40px"></span></span><span class="mut">Matr. <span class="num">0417</span></span><span class="mut">desde <span class="num">2021</span></span><span class="val"><span class="pill ok">Em dia</span></span></div>
+                      <div class="trow"><span>Associado <span class="redact" style="width:58px"></span></span><span class="mut">Matr. <span class="num">0390</span></span><span class="mut">desde <span class="num">2017</span></span><span class="val"><span class="pill warn">Pendente</span></span></div>
+                      <div class="trow"><span>Associado <span class="redact" style="width:46px"></span></span><span class="mut">Matr. <span class="num">0355</span></span><span class="mut">desde <span class="num">2020</span></span><span class="val"><span class="pill ok">Em dia</span></span></div>
+                    </div>
+                    <div class="panel">
+                      <div class="panel-title">Arrecadação · 6 meses</div>
+                      <div class="bars gold">
+                        <i style="height:52%"></i><i style="height:58%"></i><i style="height:50%"></i><i style="height:66%"></i><i style="height:72%"></i><i style="height:84%"></i>
+                      </div>
+                      <div class="axis"><span>mar</span><span>abr</span><span>mai</span><span>jun</span><span>jul</span><span>ago</span></div>
+                    </div>
+                  </div>
+                </main>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Gestão de projetos & BP -->
       <article class="project reveal">
         <div class="p-info">
           <span class="p-num">P.04</span>
-          <h3>Gestão de Projetos &amp; PMO</h3>
+          <h3>Gerente de Projetos &amp; Business Partner</h3>
           <p class="p-type">Condução de portfólio de iniciativas</p>
           <p>
-            Além de desenvolver, conduzo os projetos: roadmap, cronograma, riscos e comunicação com stakeholders.
-            Rituais enxutos, status report objetivo e um painel único onde o negócio enxerga o andamento
-            de cada frente sem precisar perguntar.
+            Em todos os projetos, além de desenvolver, eu conduzo: roadmap, cronograma, riscos e comunicação
+            com stakeholders. Como business partner, participo da priorização junto à gestão — o negócio enxerga
+            o andamento de cada frente em um painel único, sem precisar perguntar.
           </p>
           <div class="p-tags">
             <span class="p-tag">Roadmap</span>
@@ -885,17 +900,6 @@
       </div>
       <div class="stack-groups reveal">
         <div class="stack-g">
-          <h4>Desenvolvimento</h4>
-          <div class="stack-list">
-            <span class="stack-item">HTML · CSS · JS</span>
-            <span class="stack-item">Sistemas web</span>
-            <span class="stack-item">Bancos de dados</span>
-            <span class="stack-item">APIs &amp; integrações</span>
-            <span class="stack-item">Automação</span>
-            <span class="stack-item">Dashboards &amp; BI</span>
-          </div>
-        </div>
-        <div class="stack-g">
           <h4>Gestão de projetos</h4>
           <div class="stack-list">
             <span class="stack-item">Roadmap &amp; escopo</span>
@@ -916,6 +920,17 @@
             <span class="stack-item">Apresentações executivas</span>
           </div>
         </div>
+        <div class="stack-g">
+          <h4>Desenvolvimento</h4>
+          <div class="stack-list">
+            <span class="stack-item">HTML · CSS · JS</span>
+            <span class="stack-item">Sistemas web</span>
+            <span class="stack-item">Bancos de dados</span>
+            <span class="stack-item">APIs &amp; integrações</span>
+            <span class="stack-item">Automação</span>
+            <span class="stack-item">Dashboards &amp; BI</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -926,7 +941,7 @@
       <div class="contact reveal">
         <span class="sec-num" style="color:#f0917a">05 — Contato</span>
         <h2 style="margin-top:14px">Tem um sistema para tirar do papel — <em>ou um projeto para destravar?</em></h2>
-        <p>Vamos conversar. Posso entrar como desenvolvedor, como gerente do projeto ou como parceiro do negócio — o formato a gente define juntos.</p>
+        <p>Vamos conversar. Posso entrar como gerente do projeto, como parceiro do negócio ou como desenvolvedor — o formato a gente define juntos.</p>
         <div class="contact-actions">
           <a class="btn primary" href="mailto:renangiusti@gmail.com">renangiusti@gmail.com</a>
           <a class="btn ghost" href="https://github.com/regiusti" target="_blank" rel="noopener">GitHub ↗</a>
